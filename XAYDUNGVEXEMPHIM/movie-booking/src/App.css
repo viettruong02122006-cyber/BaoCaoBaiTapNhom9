@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+  height: 70px;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  margin-left: auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 400px;
+  background: linear-gradient(135deg, #111, #6b1111);
+  color: white;
+  padding: 100px 10%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0 0 15px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  margin: 0 0 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  background: #e50914;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b20710;
+}
+
+/* MOVIES */
+
+.movies {
+  padding: 50px 8%;
+}
+
+.movies > h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.poster {
+  height: 280px;
+  background: #222;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+}
+
+.movie-card h3 {
+  margin: 15px 0 8px;
+}
+
+.movie-card p {
+  color: #666;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 20px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .movie-list {
+    grid-template-columns: 1fr;
+  }
+}
